@@ -14,7 +14,7 @@ spec:
         app: hello-world
     spec:
       containers:
-      - image: your-user/hello-world@{{.ImageDigest}}
+      - image: "$({ .imageName })"
         name: hello-world
         ports:
         - containerPort: 8080
